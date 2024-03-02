@@ -20,6 +20,7 @@ namespace Lambdas
             BadWords.ForEach(w => Playlist.FindAll(x => x.Lyrics.ToLower().Contains(w.Word)).ForEach(y => y.Lyrics = Regex.Replace(y.Lyrics, w.Word, Regex.Replace(w.Word, "[^0-9.]", "*"), RegexOptions.IgnoreCase)));
             Playlist.FindAll(x => x.Lyrics.ToLower().Contains("*")).ForEach(y => Console.WriteLine(y.Song + " - " + y.Artists + "\n" + y.Lyrics));
         }
+        //outdated please fix
 
         public class Music
         {
